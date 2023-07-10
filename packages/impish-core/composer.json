@@ -22,9 +22,17 @@
     "require": {
         "php": ">=8.2"
     },
+    "require-dev": {
+        "pestphp/pest": "^2.8"
+    },
     "autoload": {
         "psr-4": {
             "Impish\\Core\\": "src/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
         }
     }
 }
