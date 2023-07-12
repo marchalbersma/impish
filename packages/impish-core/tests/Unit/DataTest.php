@@ -8,7 +8,11 @@ it('can be created empty', function () {
     $data = new Data();
 
     expect($data->all())->toBe([]);
+
+    expect($data->has(0))->toBe(false);
     expect($data->get(0))->toBe(null);
+
+    expect($data->has('key'))->toBe(false);
     expect($data->get('key'))->toBe(null);
 });
 
@@ -16,9 +20,17 @@ it('can be created from indexed array', function () {
     $data = new Data(['The Fellowship of the Ring', 'The Two Towers', 'The Return of the King']);
 
     expect($data->all())->toBe(['The Fellowship of the Ring', 'The Two Towers', 'The Return of the King']);
+
+    expect($data->has(0))->toBe(true);
     expect($data->get(0))->toBe('The Fellowship of the Ring');
+
+    expect($data->has(1))->toBe(true);
     expect($data->get(1))->toBe('The Two Towers');
+
+    expect($data->has(2))->toBe(true);
     expect($data->get(2))->toBe('The Return of the King');
+
+    expect($data->has(3))->toBe(false);
     expect($data->get(3))->toBe(null);
 });
 
@@ -26,7 +38,13 @@ it('can be created from associative array', function () {
     $data = new Data(['series' => 'The Lord of the Rings', 'director' => 'Peter Jackson']);
 
     expect($data->all())->toBe(['series' => 'The Lord of the Rings', 'director' => 'Peter Jackson']);
+
+    expect($data->has('series'))->toBe(true);
     expect($data->get('series'))->toBe('The Lord of the Rings');
+
+    expect($data->has('director'))->toBe(true);
     expect($data->get('director'))->toBe('Peter Jackson');
+
+    expect($data->has('writers'))->toBe(false);
     expect($data->get('writers'))->toBe(null);
 });
