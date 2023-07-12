@@ -25,4 +25,16 @@ class Data
     {
         return $this->array;
     }
+
+    /**
+     * Returns the value in the underlying array for the given key.
+     *
+     * @param int|string $key The key.
+     *
+     * @return mixed The value in the underlying array.
+     */
+    public function get(int|string $key): mixed
+    {
+        return $this->array[$key] ?? null;
+    }
 }
