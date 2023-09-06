@@ -15,5 +15,22 @@
     },
     "require": {
         "php": "^8.2"
-    }
+    },
+    "require-dev": {
+        "marchalbersma/impish": "@dev"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Impish\\Tests\\": "packages/impish/tests/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "packages/impish",
+            "options": {
+                "symlink": true
+            }
+        }
+    ]
 }

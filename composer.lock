@@ -4,12 +4,57 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c4ea37964a834602f86c2e242621fadf",
+    "content-hash": "4b1ce8be386f8848ca99f8e7eaf8978a",
     "packages": [],
-    "packages-dev": [],
+    "packages-dev": [
+        {
+            "name": "marchalbersma/impish",
+            "version": "dev-development",
+            "dist": {
+                "type": "path",
+                "url": "packages/impish",
+                "reference": "48d9d3dc7ce1dc3e9f2ada0d26d9ac9ab4a52623"
+            },
+            "require": {
+                "php": "^8.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Impish\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Halbersma",
+                    "email": "contact@marchalbersma.com"
+                }
+            ],
+            "description": "The core components of the Impish data importing library",
+            "keywords": [
+                "core",
+                "data",
+                "impish",
+                "import"
+            ],
+            "support": {
+                "issues": "https://github.com/marchalbersma/impish/issues",
+                "source": "https://github.com/marchalbersma/impish"
+            },
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        }
+    ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "marchalbersma/impish": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
