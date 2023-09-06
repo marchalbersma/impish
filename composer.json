@@ -1,0 +1,19 @@
+{
+    "name": "marchalbersma/impish-monorepo",
+    "description": "The Impish data importing library monorepo",
+    "keywords": ["impish", "monorepo", "data", "import"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marc Halbersma",
+            "email": "contact@marchalbersma.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/marchalbersma/impish/issues",
+        "source": "https://github.com/marchalbersma/impish"
+    },
+    "require": {
+        "php": "^8.2"
+    }
+}
